@@ -35,9 +35,9 @@ public class B4673 {
 		/*
  		좀 더 효과적이고 수학적인 코드
 		while (testNum > 0) {
-            sum = sum + (testNum % 10);
-            testNum = testNum / 10;
-       	}
+            	sum = sum + (testNum % 10);
+            	testNum = testNum / 10;
+       		}
 		 */
 		
 		return sum;
