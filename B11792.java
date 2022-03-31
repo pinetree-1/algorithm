@@ -22,25 +22,26 @@ public class B11792 {
 		sb = new StringBuilder();
 		init();
 		
-		hanoi(N,"1","2","3");
+		hanoi(N,"1","3","2");
 		System.out.println(count);
 		System.out.println(sb);
 
 	}
 	
-	static void hanoi(int num, String start, String mid, String end) {
+	static void hanoi(int num, String start, String end, String mid) {
 		count++;
+
 		if(num==1) {
-			move(start,end);
-			return;
+			move(num, start,end);
+			return ;
 		}
 		
 		hanoi(num-1,start, mid, end);
-		move(start, end);
+		move(num, start, end);
 		hanoi(num-1,mid, end, start);
 	}
 	
-	static void move(String start, String end) {
+	static void move(int num, String start, String end) {
 		sb.append(start+" "+end+"\n");
 	}
 	
